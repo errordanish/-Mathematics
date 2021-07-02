@@ -1,0 +1,15 @@
+/* Write C program to compute the straightline distance between two coordinates (x1,y1) and (x2,y2) */
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+    int x1,y1,x2,y2,side1,side2,distance=0;
+    printf("Enter the value of x and y for first coordinate\n");
+    scanf("%d%d",&x1,&y1);
+    printf("Enter the the value of x and y for second coordinate\n");
+    scanf("%d%d",&x2,&y2);
+    side1=x1-x2;
+    side2=y1-y2;
+    distance=sqrt(side1*side1 + side2*side2);                //or distance=sqrt(pow(side1,2) + pow(side2,2));
+    printf("Distance is %d",distance);
+}
