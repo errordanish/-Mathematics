@@ -1,0 +1,48 @@
+#include<stdio.h>
+#include<math.h>
+
+void main ()
+{
+    float p,q,r,s,r1,a,b,c,d,r2,r3;
+
+    printf("cubic equation is of form px^3 + qx^2+ rx +s \n");
+    printf("Enter the cofficiants of cubic eqution\n");
+    scanf("%f%f%f%f",&p,&q,&r,&s);
+    printf("cubic equation is of form %fx^3 + %fx^2+ %fx +%f \n",p,q,r,s);
+    printf("enter the value of x / root1 for which cubic equation is zero : ",r1);
+    scanf("%f",&r1);
+    b= (q + p*r1);
+    c= (r + (q*r1 + p*r1*r1));
+    a= p;
+
+    printf("quadratic equation becomes %fx^2+%fx+%f\n",a,b,c);
+
+    if((a==0)||(b==0)||(c==0))
+    {
+    printf("Enter a quadratic equation\n");
+    exit(0);
+    }
+    d=(b*b-4*a*c);
+    printf("%f",d);
+    if(d==0)
+    {
+        printf("Roots are equal\n");
+        r2=-b/(2*a);
+        r3=-b/(2*a);
+        printf("root2=%f\n root3=%f",r2,r3);
+    }
+    else if(d>0)
+    {
+        printf("Roots are real and distinct\n");
+        r2=(-b+sqrt(d))/(2*a);
+        r3=(-b-sqrt(d))/(2*a);
+        printf("Root2=%f\n Root3=%f",r2,r3);
+    }
+    else
+    {
+         printf("Roots are imaginary\n");
+         r2= -b/(2*a);
+         r3= sqrt(fabs(d))/(2*a);
+         printf("Root2 is %f +i %f \n Root3 is %f -i %f",r2,r3,r2,r3);
+    }
+}
