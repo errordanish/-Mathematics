@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float a,b,c,d,e;
+
+    printf("quadratic equation is of form ax^2 +bx +c \n");
+    printf("enter the cofficient of qaudratic equation\n ");
+    scanf("%f%f%f",&a,&b,&c);
+    printf("\nquadratic equation becomes %fx^2 + %fx + %f",a,b,c);
+    printf("\n on differentiation quadratic equation becomes :2*%fx + %f \n",a,b);
+
+    d= -b/(2*a) ;
+    printf("value of x after differentiation : %f\n",d);
+    e =  ( a*(-b/(2*a))*(-b/(2*a)) + b*(-b/(2*a)) + c ) ;
+
+    if(d<0)
+    {
+        printf("Quadratic equation is maximum at %f\n",d);
+        e =  ( a*(-b/(2*a))*(-b/(2*a)) + b*(-b/(2*a)) + c ) ;
+        printf("maximum value of quadratic equation is %f\n",e);
+    }
+    if(d>0)
+     {
+        printf("Quadratic equation is minimum at %f\n",d);
+        e =  ( a*(-b/(2*a))*(-b/(2*a)) + b*(-b/(2*a)) + c ) ;
+        printf("minimum value of quadratic equation is %f\n",e);
+    }
+    if(d=0)
+    {
+        printf("quadratic equation is constant or has no maximum ");
+        printf("or minimum value");
+    }
+
+}
