@@ -1,0 +1,38 @@
+/*program to find roots of a quadratic equation*/
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+void main()
+{
+    float a,b,c,d=0,r1,r2;
+    printf("Enter the co-efficients of a quadratic equation\n");
+    scanf("%f%f%f",&a,&b,&c);
+    if((a==0)||(b==0)||(c==0))
+    {
+    printf("Enter a quadratic equation\n");
+    exit(0);
+    }
+    d=(b*b-4*a*c);
+    printf("%f",d);
+    if(d==0)
+    {
+        printf("Roots are equal");
+        r1=-b/(2*a);
+        r2=r1;
+        printf("root1=%f, root2=%f",r1,r2);
+    }
+    else if(d>0)
+    {
+        printf("Roots are real and distinct\n");
+        r1=(-b+sqrt(d))/(2*a);
+        r2=(-b-sqrt(d))/(2*a);
+        printf("Root1=%f, Root2=%f",r1,r2);
+    }
+    else
+    {
+         printf("Roots are imaginary\n");
+         r1= -b/(2*a);
+         r2= sqrt(fabs(d))/(2*a);
+         printf("Root1 is %f +i %f   Root2 is %f -i %f",r1,r2,r1,r2);
+    }
+}

@@ -1,0 +1,13 @@
+/* Write a c program to find area, circumference and diameter of a circle using symbolic constants */
+#include<stdio.h>
+#define PI 3.142
+void main()
+{
+float radius,diameter,area,circumference;
+printf("Enter the radius of the circle\n");
+scanf("%f",&radius);
+area=PI*radius*radius;
+diameter = 2*radius;
+circumference=2*PI*radius;
+printf("Area of circle is %f, Diameter is %f and circumfernce of circle is %f",area,diameter,circumference);
+}

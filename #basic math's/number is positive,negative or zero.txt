@@ -1,0 +1,9 @@
+/* Program to find whether given number is positive negative or zero */
+#include <stdio.h>
+void main()
+{
+    int n;
+    printf("Enter the number\n");
+    scanf("%d",&n);
+    (n>0)? printf("%d is positive\n",n) : ((n<0)? printf("%d is negative\n",n) : printf("The number is zero\n"));
+}
