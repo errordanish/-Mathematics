@@ -5,6 +5,7 @@ void main()
 {
 float radius,diameter,area,circumference;
 printf("Enter the radius of the circle\n");
+//taking input
 scanf("%f",&radius);
 area=PI*radius*radius;
 diameter = 2*radius;
